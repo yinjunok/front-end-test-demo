@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    #demo {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100px;
+      height: 100px;
+      background: black;
+    }
+  </style>
+</head>
+<body>
+  <div id="demo"></div>
+  <script>
+    const demo = document.getElementById('demo');
+    const doc = document.body;
+
+    demo.addEventListener('mousedown', function() {
+      doc.addEventListener('mousemove', docMove)
+      doc.addEventListener('mouseup', docUp);
+    });
+
+    function docMove(e) {
+      const sty = getComputedStyle(demo);
+      demo.style.top = parseInt(sty.top, 10) + e.movementY + 'px';
+      demo.style.left = parseInt(sty.left, 10) + e.movementX + 'px';
+    }
+
+    function docUp(e) {
+      doc.removeEventListener('mousemove', docMove);
+      doc.removeEventListener('mouseup', docUp);
+    }
+
+  </script>
+</body>
+</html>

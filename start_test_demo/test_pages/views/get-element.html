@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Test Page</title>
+  </head>
+  <body>
+    <section id="forms">
+      <h2>用 ID 查找元素</h2>
+      <form>
+        <fieldset id="forms__input">
+          <legend>Input fields</legend>
+          <p>
+            <label for="input__text">Text Input</label>
+            <input id="input__text" type="text" placeholder="Text Input">
+          </p>
+          <p>
+            <label for="input__password">Password</label>
+            <input id="input__password" type="password" placeholder="Type your Password">
+          </p>
+          <p>
+            <label for="input__webaddress">Web Address</label>
+            <input id="input__webaddress" type="url" placeholder="http://yoursite.com">
+          </p>
+          <p>
+            <label for="input__emailaddress">Email Address</label>
+            <input id="input__emailaddress" type="email" placeholder="name@email.com">
+          </p>
+          <p>
+            <label for="input__phone">Phone Number</label>
+            <input id="input__phone" type="tel" placeholder="(999) 999-9999">
+          </p>
+          <p>
+            <label for="input__search">Search</label>
+            <input id="input__search" type="search" placeholder="Enter Search Term">
+          </p>
+          <p>
+            <label for="input__text2">Number Input</label>
+            <input id="input__text2" placeholder="Enter a Number">
+          </p>
+        </fieldset>
+      </form>
+    </section>
+
+    <div>
+      <h2>用 name 查找元素</h2>
+      <input name="username" type="text" />
+      <input name="password" type="password" />
+    </div>
+
+    <div>
+      <h2>用 class 查找元素</h2>
+      <p>
+        <label for="input__text3" class="error">Error</label>
+        <input id="input__text3" class="is-error" type="text" placeholder="Text Input">
+      </p>
+      <p>
+        <label for="input__text4" class="valid">Valid</label>
+        <input id="input__text4" class="is-valid" type="text" placeholder="Text Input">
+      </p>
+    </div>
+
+    <div>
+      <h2>用 css 选择器查找元素</h2>
+      <p>
+        <label for="input__search">Search</label>
+        <input id="input__search-2" type="search" placeholder="Enter Search Term">
+      </p>
+      <p>
+        <label>Number Input</label>
+        <input type="number" placeholder="Enter a Number">
+      </p>
+      <p>
+        <label class="error">Error</label>
+        <input class="is-error-2" type="text" placeholder="Text Input">
+      </p>
+      <p>
+        <label class="valid">Valid</label>
+        <input class="is-valid-2" type="text" placeholder="Text Input">
+      </p>
+    </div>
+  </body>
+</html>
